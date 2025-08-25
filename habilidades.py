@@ -7,6 +7,7 @@ O método PUT a partir de um ID(identificação da posição) deverá alterar o 
 
 O método DELETE deverá deletar uma habilidade que esteja na posição informada na requisição
 
+Incluir validação no app-restful para verificar se a habilidade informada existe na lista de habilidades.
 '''
 
 
@@ -71,3 +72,18 @@ class ListaHabilidades(Resource):
         dados['id'] =  posicao + 1
         lista_habilidades.append(dados)
         return lista_habilidades[posicao]
+
+
+class ChecarHabilidades(Resource):
+    def get(self, habilidade):
+        habilidade = habilidade.lower()
+        if habilidade:
+            if any(h['habilidade'].lower()  == habilidade for h in lista_habilidades):
+                resposta = f'A habilidades {habilidade} está na lista. '
+            else:
+                resposta = f'A habilidades {habilidade} NÃO está na lista. '
+
+            return resposta
+
+        else:
+            return 'Habilidade não informada'

@@ -5,7 +5,7 @@ from flask import Flask, request
 from flask_restful import Resource, Api
 
 
-from habilidades import Habilidades, ListaHabilidades
+from habilidades import Habilidades, ListaHabilidades, ChecarHabilidades
 
 
 app = Flask(__name__)
@@ -64,6 +64,7 @@ api.add_resource(Desenvolvedor, '/dev/<int:id>/')
 api.add_resource(ListaDesenvolvedores, '/dev/')
 api.add_resource(ListaHabilidades, '/habilidades/' )
 api.add_resource(Habilidades, '/habilidades/<int:id>' )
+api.add_resource(ChecarHabilidades, '/habilidades/<habilidade>')
 
 if __name__ == '__main__':
     app.run(debug=True)
