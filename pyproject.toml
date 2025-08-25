@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.11"
 flask = "*"
 flask-restful = "*"
+sqlalchemy = "*"
 
 
 [build-system]
