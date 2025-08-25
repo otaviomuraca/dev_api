@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "desenvolvendo rest apis com python e flask"
+version = "0.1.0"
+description = ""
+authors = ["Otavio Muraca <42158209+otaviomuraca@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
