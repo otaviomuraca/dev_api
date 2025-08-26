@@ -13,7 +13,7 @@ def listar():
 def consultar(nome):
     pessoa = Pessoas.query.filter_by(nome=nome).first()
     # SELECT * FROM pessoas WHERE nome = :nome LIMIT 1;
-    #.fisrt() retorna a primeira a primeira linha encontrada
+    #.first() retorna a primeira a primeira linha encontrada
     print({'Nome':pessoa.nome,'idade':pessoa.idade})
 
 def atualizar(id:int, novo_nome:str, nova_idade:int):
