@@ -9,7 +9,7 @@ from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
 from sqlalchemy.orm import scoped_session, sessionmaker, relationship
 from sqlalchemy.ext.declarative import declarative_base
 
-engine = create_engine('sqlite:///exercicio03/programadores.db')
+engine = create_engine('sqlite:///exercicio 03/programadores.db')
 
 db_session = scoped_session(sessionmaker(autocommit=False, bind=engine))
 
